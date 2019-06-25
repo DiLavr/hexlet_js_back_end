@@ -1,19 +1,19 @@
 // BEGIN
 const isPalindrome = (string) => {
-  if (string.length <= 1) {
-    return true;
-  }
+    if (string.length <= 1) {
+        return true;
+    }
 
-  const firstSymbol = string[0];
-  const lastSymbol = string[string.length - 1];
+    const firstSymbol = string[0];
+    const lastSymbol = string[string.length - 1];
 
-  if (firstSymbol !== lastSymbol) {
-    return false;
-  }
+    if (firstSymbol !== lastSymbol) {
+        return false;
+    }
 
-  const stringWithoutFirstAndLastSymbols = string.substring(1, string.length - 1);
+    const stringWithoutFirstAndLastSymbols = string.substring(1, string.length - 1);
 
-  return isPalindrome(stringWithoutFirstAndLastSymbols);
+    return isPalindrome(stringWithoutFirstAndLastSymbols);
 };
 
 export default isPalindrome;
